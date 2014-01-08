@@ -1,8 +1,9 @@
-package prajaktv.unixtools;
+package cli;
 
 import prajaktv.fileReader.FileReader;
+import prajaktv.unixtools.WC;
 
-public class wcClient {
+public class WcClient {
     public static void main(String[] args) {
         int no_of_lines = 0;
         int no_of_words = 0;
@@ -11,11 +12,13 @@ public class wcClient {
 
         FileReader fr = new FileReader();
         String data = fr.readFile(filename);
-        wc lib = new wc(data);
+        WC lib = new WC();
 
+        lib.wc(data);
         no_of_lines = lib.countLines();
         numberOfCharacters = lib.countCharacters();
         no_of_words = lib.countWords();
+
 
         System.out.println(no_of_lines + "\t" + no_of_words + "\t" + numberOfCharacters);
     }

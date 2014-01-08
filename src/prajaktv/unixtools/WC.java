@@ -1,14 +1,14 @@
 package prajaktv.unixtools;
 
-public class wc {
+public class WC {
     String data;
 
-    public wc(String fileData) {
+    public void wc(String fileData) {
         data = fileData;
     }
 
     public int countLines() {
-        int no_of_lines = data.split("\n").length;
+        int no_of_lines = data.split("\n").length - 1;
         return no_of_lines;
     }
 
