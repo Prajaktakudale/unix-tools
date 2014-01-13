@@ -7,6 +7,7 @@ public class HeadClient {
     public static void main(String[] args) {
         Head lib = new Head();
         String filename;
+        StringBuilder result;
         if(args.length == 2){
         filename = args[1];
         }
@@ -14,6 +15,7 @@ public class HeadClient {
         filename = args[0];
         FileReader fr = new FileReader();
         String data = fr.readFile(filename);
-        lib.head(data, args);
+        result = lib.head(data, args);
+        System.out.println(result);
     }
 }
