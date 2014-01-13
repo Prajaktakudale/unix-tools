@@ -1,7 +1,7 @@
 package prajaktv.unixtools;
 
 public class Uniq {
-    public void getUniqLines(String filedata) {
+    public StringBuilder getUniqLines(String filedata) {
         StringBuilder result = new StringBuilder("");
         String[] lines;
         int index;
@@ -12,6 +12,6 @@ public class Uniq {
                 result.append(lines[index + 1]).append("\n");
             else index++;
         }
-        System.out.println(result);
+        return result;
     }
 }

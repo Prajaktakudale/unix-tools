@@ -1,8 +1,8 @@
 package prajaktv.unixtools;
 
 public class Reduce {
-    public void reduceSpaces(String fileData) {
+    public String reduceSpaces(String fileData) {
         fileData = fileData.replaceAll(" +", " ");
-        System.out.println(fileData);
+        return fileData;
     }
 }

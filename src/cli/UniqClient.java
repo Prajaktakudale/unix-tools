@@ -7,8 +7,10 @@ public class UniqClient {
     public static void main(String[] args) {
         Uniq lib = new Uniq();
         String filename = args[0];
+        StringBuilder result;
         FileReader fr = new FileReader();
         String data = fr.readFile(filename);
-        lib.getUniqLines(data);
+        result = lib.getUniqLines(data);
+        System.out.println(result);
     }
 }
