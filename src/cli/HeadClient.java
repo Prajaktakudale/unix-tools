@@ -7,7 +7,7 @@ public class HeadClient {
     public static void main(String[] args) {
         Head lib = new Head();
         String filename;
-        StringBuilder result;
+        String result;
         if(args.length == 2){
         filename = args[1];
         }

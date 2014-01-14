@@ -8,6 +8,7 @@ public class CutClient {
         Cut lib = new Cut();
         String delimeter = " ";
         int feild = 0;
+        String result;
         String filename = "";
         if (args.length == 3) {
             filename = args[0];
@@ -26,6 +27,7 @@ public class CutClient {
         FileReader fr = new FileReader();
         String data = fr.readFile(filename);
 
-        lib.cutCount(data, feild, delimeter);
+        result = lib.cutCount(data, feild, delimeter);
+        System.out.println(result);
     }
 }

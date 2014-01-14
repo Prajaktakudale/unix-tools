@@ -2,7 +2,7 @@ package prajaktv.unixtools;
 
 
 public class Cut {
-    public void cutCount(String filedata, int field_no, String delimeter) {
+    public String cutCount(String filedata, int field_no, String delimeter) {
         String words[];
         String result = "";
         int i;
@@ -14,6 +14,6 @@ public class Cut {
             else
                 result = result + words[field_no - 1] + "\r\n";
         }
-        System.out.println(result);
+        return result;
     }
 }
