@@ -12,7 +12,7 @@ public class Cut {
             if (words.length <= field_no)
                 result = result + "\r\n";
             else
-                result = result + words[field_no - 1] + "\r\n";
+                result = result + words[field_no - 1] + "\n";
         }
         return result;
     }
