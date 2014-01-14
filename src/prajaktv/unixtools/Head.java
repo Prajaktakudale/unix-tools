@@ -9,10 +9,8 @@ public class Head {
         }
         String lines[] = filedata.split("\r\n");
         for (int line = 0; line < count; line++){
-//            System.out.println("i m here" + "    " + lines[line]);
             stringBuilder.append(lines[line]).append("\r\n");
         }
-//        System.out.println(stringBuilder);
         return stringBuilder.toString();
     }
 }
