@@ -11,7 +11,9 @@ public class CutClientTest {
         String text = "p r a\np r a\np r a";
         Cut cut = new Cut();
         String expected = "p\np\np\n";
+
         String actual = cut.cutCount(text, 1, " ");
+
         assertEquals(expected, actual);
     }
 
@@ -20,7 +22,9 @@ public class CutClientTest {
         String text = "p r a\np r a\np r a";
         Cut cut = new Cut();
         String expected = "r\nr\nr\n";
+
         String actual = cut.cutCount(text, 2, " ");
+
         assertEquals(expected, actual);
     }
 
@@ -29,7 +33,9 @@ public class CutClientTest {
         String text = "p,r,a\np,r,a\np,r,a";
         Cut cut = new Cut();
         String expected = "r\nr\nr\n";
+
         String actual = cut.cutCount(text, 2, ",");
+
         assertEquals(expected, actual);
     }
 }

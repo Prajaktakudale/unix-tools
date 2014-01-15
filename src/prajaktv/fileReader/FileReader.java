@@ -9,7 +9,7 @@ public class FileReader {
         try {
             BufferedReader br = new BufferedReader(new java.io.FileReader(filename));
             while ((sCurrentLine = br.readLine()) != null) {
-                data += "\r\n"+sCurrentLine;
+                data += sCurrentLine + "\r\n";
             }
         } catch (Exception ex) {
             ex.printStackTrace();
