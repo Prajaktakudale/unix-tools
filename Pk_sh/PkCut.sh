@@ -1,0 +1,1 @@
+java -cp out/artifacts/UnixTools_jar2/UnixTools.jar cli.CutClient $1 $2 $3
