@@ -12,7 +12,7 @@ This command will give number of lines,words,characters.
 
 You Have to give whole path of text file.
 
-    Example: `PkWc.sh a.txt` will give `6 25 100 a.txt` as an output.
+    Example: PkWc.sh a.txt will give 6 25 100 a.txt as an output.
 
 ##Head
 
@@ -28,7 +28,7 @@ This command will give top 10 lines from the text file given
 
 This will give the no. of lines specified in given command.
 
-    Example: `PkHead.sh -4 a.txt` will display top 4 lines from a.txt file.
+    Example: PkHead.sh -4 a.txt will display top 4 lines from a.txt file.
     
 RELESE NOTE : -If file not have minimun 10 lines it will throw error. 
 -If order of command change it wiil fail.
@@ -41,13 +41,13 @@ This is Tail tool,which by default displays 10 lines of file from bottom.
 
 This command will give bottom 10 lines from the text file given
 
-    Example: `PkTail.sh a.txt` will print 10 lines from a.txt file.
+    Example: PkTail.sh a.txt will print 10 lines from a.txt file.
 
 `PkTail.sh [no.of lines] filename`
 
 This will give the no. of lines specified in given command.
 
-    Example: `Pktail.sh -4 a.txt` will display bottom 4 lines from a.txt file.
+    Example: Pktail.sh -4 a.txt will display bottom 4 lines from a.txt file.
     
 RELESE NOTE : If file not have minimun 10 lines it will throw error.
 -If order of command change it wiil fail.
@@ -60,7 +60,7 @@ This is Uniq tool,which discards one of successive identical lines from input bu
 
 This command will display all lines in file and discards duplicate lines if they are one after another.
 
-    Example: `PkUniq.sh a.txt` will give all unique lines in a.txt file.
+    Example: PkUniq.sh a.txt will give all unique lines in a.txt file.
 
 ##Cut
 
@@ -70,7 +70,7 @@ This is Cut tool,which cuts and gives the output according to given command.
 
 This command will display the contents of specified field
 
-    Example: `PkCut.sh a.txt -2`  will display the content in 2nd field of a.txt file.
+    Example: PkCut.sh a.txt -2  will display the content in 2nd field of a.txt file.
 
 `PkCut.sh  filename -[fieldno] -d[delimiter]`
 
@@ -97,4 +97,4 @@ This tool reduces multiple spaces from file and replaces it with single space.
 `PkReduceSpaces.sh filename`
 
 
-Example: `PkReduceSpaces.sh a.txt` will reduce all multiple spaces from file names.txt. 
+Example: PkReduceSpaces.sh a.txt will reduce all multiple spaces from file names.txt. 
