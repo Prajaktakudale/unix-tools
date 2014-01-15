@@ -22,7 +22,7 @@ This is Head tool,which by default displays top 10 lines of file.
 
 This command will give top 10 lines from the text file given
 
-    Example: `PkHead.sh a.txt` will print 10 lines from a.txt file.
+    Example: PkHead.sh a.txt will print 10 lines from a.txt file.
 
 `PkHead.sh [no.of lines] filename`
 
@@ -96,5 +96,4 @@ This command will give all content in the file in sorted order.
 This tool reduces multiple spaces from file and replaces it with single space.
 `PkReduceSpaces.sh filename`
 
-
-Example: PkReduceSpaces.sh a.txt will reduce all multiple spaces from file names.txt. 
+    Example: PkReduceSpaces.sh a.txt will reduce all multiple spaces from file names.txt. 
