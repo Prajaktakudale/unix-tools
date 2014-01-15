@@ -1,1 +1,1 @@
-java -cp out/artifacts/UnixTools_jar2/UnixTools.jar cli.WcClient $1
+java -cp D:/Projects/unix-tools/out/artifacts/UnixTools_jar/UnixTools.jar cli.WcClient $1
