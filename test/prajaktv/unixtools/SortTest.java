@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SortTest {
     @Test
-    public void testSortData() throws Exception {
+    public void testDataIsSortingInAssendingOrder() throws Exception {
         String text = "d\r\nc\r\na";
         String expected = "a\r\nc\r\nd\r\n";
 

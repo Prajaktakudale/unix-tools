@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TailClientTest {
     @Test
-    public void test_give_last_10_lines_default() throws Exception {
+    public void testGiveLast10LinesDefault() throws Exception {
         String text = "prajakta\r\nsayali\r\nmanali\r\npallavi\r\nshital\r\nkavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir";
         Tail tail = new Tail();
         String args[] = {"one.txt"};
@@ -17,7 +17,7 @@ public class TailClientTest {
     }
 
     @Test
-    public void test_gives_last_5_lines() throws Exception {
+    public void testGivesLast5Lines() throws Exception {
         String text = "prajakta\r\nsayali\r\nmanali\r\npallavi\r\nshital\r\nkavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir";
         Tail tail = new Tail();
         String args[] = {"-5", "one.txt"};

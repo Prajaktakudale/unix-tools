@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class UniqClientTest {
     @Test
-    public void test_for_print_uniq_data() throws Exception {
+    public void testForPrintUniqData() throws Exception {
         String text = "praju\npallu\npallu\npraju";
         Uniq uniq = new Uniq();
         String expected = "praju\npallu\npraju\n";
@@ -17,7 +17,7 @@ public class UniqClientTest {
     }
 
     @Test
-    public void test_for_print_uniq_data1() throws Exception {
+    public void testForPrintUniqData1() throws Exception {
         String text = "praju\npraju\npallu\npallu";
         Uniq uniq = new Uniq();
         String expected = "praju\npallu\n";

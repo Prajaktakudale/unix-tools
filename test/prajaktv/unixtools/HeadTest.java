@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class HeadTest {
     @Test
-    public void test_give_first_5_lines() throws Exception {
+    public void testGiveFirst5Lines() throws Exception {
         String text = "prajakta\r\nsayali\r\nmanali\r\npallavi\r\nshital\r\nkavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir";
         Head head = new Head();
         String args[] = {"-5"};
@@ -17,7 +17,7 @@ public class HeadTest {
     }
 
     @Test
-    public void test_gives_10_lines_defalut() throws Exception {
+    public void testGives10LinesDefalut() throws Exception {
         String text = "prajakta\r\nsayali\r\nmanali\r\npallavi\r\nshital\r\nkavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir";
         Head head = new Head();
         String args[] = {"one.txt"};
