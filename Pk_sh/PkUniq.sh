@@ -1,1 +1,1 @@
-java -cp D:/Projects/unix-tools/out/artifacts/UnixTools_jar/UnixTools.jar cli.UniqClient $1
+java -cp $PK_SH/UnixTools.jar cli.UniqClient $1

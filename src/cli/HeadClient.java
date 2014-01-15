@@ -15,7 +15,7 @@ public class HeadClient {
         filename = args[0];
         FileReader fr = new FileReader();
         String data = fr.readFile(filename);
-        result = lib.head(data, "-10");
+        result = lib.head(data, args[0]);
         System.out.println(result);
     }
 }

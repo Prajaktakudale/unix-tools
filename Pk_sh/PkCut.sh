@@ -1,1 +1,1 @@
-java -cp D:/Projects/unix-tools/out/artifacts/UnixTools_jar/UnixTools.jar cli.CutClient $1 $2 $3
+java -cp $PK_SH/UnixTools.jar cli.CutClient $1 $2 $3

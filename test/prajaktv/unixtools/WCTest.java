@@ -20,10 +20,10 @@ public class WCTest {
 
     @Test
     public void testCountCharacters() throws Exception {
-        String data = "prajakta Sayali Pallavi Samiksha kavita shital";
+        String data = "prajakta";
         WC lib = new WC();
         lib.wc(data);
-        int expected = 46;
+        int expected = 8;
 
         int actual = lib.countCharacters();
 
