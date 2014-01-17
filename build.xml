@@ -1,0 +1,21 @@
+<project>
+    <target name="createDir">
+        <mkdir dir="unix_tools"></mkdir>
+        <mkdir dir="unix_tools/lib"></mkdir>
+        <mkdir dir="unix_tools/bin"></mkdir>
+        <copy file="README.md" todir="unix_tools"/>
+    </target>
+    <target name="moveSH">
+        <copy file="Pk_sh/PkWc.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkHead.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkTail.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkReduceSpaces.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkCut.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkUniq.sh" todir="unix_tools/bin"/>
+        <copy file="Pk_sh/PkSort.sh" todir="unix_tools/bin"/>
+    </target>
+    <target name="movejar">
+        <copy file="out/artifacts/UnixTools_jar/unixTools.jar" todir="unix_tools/lib"/>
+    </target>
+
+</project>
