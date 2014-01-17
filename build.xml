@@ -15,7 +15,7 @@
         <copy file="Pk_sh/PkSort.sh" todir="unix_tools/bin"/>
     </target>
     <target name="movejar" depends = "moveSH">
-        <copy file="out/artifacts/UnixTools_jar/unixTools.jar" todir="unix_tools/lib"/>
+        <copy file="out/artifacts/UnixTools_jar/UnixTools.jar" todir="unix_tools/lib"/>
     </target>
     <target name="createZip" depends="movejar">
     <zip destfile="unix_tools.zip"
