@@ -5,7 +5,7 @@
         <mkdir dir="unix_tools/bin"></mkdir>
         <copy file="README.md" todir="unix_tools"/>
     </target>
-    <target name="moveSH">
+    <target name="moveSH" depends="createDir">
         <copy file="Pk_sh/PkWc.sh" todir="unix_tools/bin"/>
         <copy file="Pk_sh/PkHead.sh" todir="unix_tools/bin"/>
         <copy file="Pk_sh/PkTail.sh" todir="unix_tools/bin"/>
@@ -14,10 +14,11 @@
         <copy file="Pk_sh/PkUniq.sh" todir="unix_tools/bin"/>
         <copy file="Pk_sh/PkSort.sh" todir="unix_tools/bin"/>
     </target>
-    <target name="movejar">
+    <target name="movejar" depends = "moveSH">
         <copy file="out/artifacts/UnixTools_jar/unixTools.jar" todir="unix_tools/lib"/>
     </target>
-    <target name="createZip" depends="movejar"
+    <target name="createZip" depends="movejar">
     <zip destfile="unix_tools.zip"
          basedir="unix_tools"/>
+    </target>
 </project>
