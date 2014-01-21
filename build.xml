@@ -1,24 +1,57 @@
 <project>
-    <target name="createDir">
-        <mkdir dir="unix_tools"></mkdir>
-        <mkdir dir="unix_tools/lib"></mkdir>
-        <mkdir dir="unix_tools/bin"></mkdir>
-        <copy file="README.md" todir="unix_tools"/>
+    <property name="test-dir" location="Test"/>
+    <property name="build" location="build"/>
+    <property name="src" location="src"/>
+
+    <target name="start">
+        <mkdir dir="${build}/test"/>
+        <mkdir dir="${build}/src"/>
     </target>
-    <target name="moveSH" depends="createDir">
-        <copy file="Pk_sh/PkWc.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkHead.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkTail.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkReduceSpaces.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkCut.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkUniq.sh" todir="unix_tools/bin"/>
-        <copy file="Pk_sh/PkSort.sh" todir="unix_tools/bin"/>
+
+    <target name="compile-source" depends="start">
+        <javac srcdir="src" destdir="${build}/src"/>
     </target>
-    <target name="movejar" depends = "moveSH">
-        <copy file="out/artifacts/UnixTools_jar/UnixTools.jar" todir="unix_tools/lib"/>
+
+    <target name="compile-test" depends="compile-source">
+        <javac srcdir="${test-dir}" destdir="${build}/test"
+                classpath = "${build}/src"/>
     </target>
-    <target name="createZip" depends="movejar">
-    <zip destfile="unix_tools.zip"
-         basedir="unix_tools"/>
+
+    <target name="run-tests" depends="compile-test">
+        <java classname="org.junit.runner.JUnitCore"
+              classpath="externalLib/junit-4.10.jar;${build}/src;${build}/test">
+            <arg value="prajaktv.unixtools.WCTest"/>
+            <arg value="prajaktv.unixtools.CutClientTest"/>
+            <arg value="prajaktv.unixtools.HeadTest"/>
+            <arg value="prajaktv.unixtools.TailClientTest"/>
+            <arg value="prajaktv.unixtools.UniqClientTest"/>
+            <arg value="prajaktv.unixtools.SortTest"/>
+            <arg value="prajaktv.unixtools.ReduceSpacesClientTest"/>
+        </java>
+    </target>
+
+    <target name="createJar" depends="run-tests">
+        <mkdir dir="unix-tools_dist/lib"/>
+        <mkdir dir="unix-tools_dist/bin"/>
+        <jar destfile="unix-tools_dist/lib/unix-tools.jar" basedir="build/src"/>
+    </target>
+
+    <target name="moveSH" depends="createJar">
+        <copy file="Pk_sh/PkWc.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkHead.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkTail.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkReduceSpaces.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkCut.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkUniq.sh" todir="unix-tools_dist/bin"/>
+        <copy file="Pk_sh/PkSort.sh" todir="unix-tools_dist/bin"/>
+    </target>
+
+    <target name="copyReadme" depends="moveSH">
+        <copy file="README.md" todir="unix-tools_dist"/>
+    </target>
+
+    <target name="createZip" depends="copyReadme">
+        <zip destfile="unix_tools.zip"
+             basedir="unix-tools_dist"/>
     </target>
 </project>
