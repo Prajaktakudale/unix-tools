@@ -9,12 +9,12 @@
     </target>
 
     <target name="compile-source" depends="start">
-        <javac srcdir="src" destdir="${build}/src"/>
+        <javac srcdir="src" destdir="${build}/src" includeAntRuntime = "false"/>
     </target>
 
     <target name="compile-test" depends="compile-source">
         <javac srcdir="${test-dir}" destdir="${build}/test"
-                classpath = "${build}/src"/>
+                classpath = "${build}/src" includeAntRuntime = "false"/>
     </target>
 
     <target name="run-tests" depends="compile-test">
