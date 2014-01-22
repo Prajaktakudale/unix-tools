@@ -14,7 +14,7 @@
 
     <target name="compile-test" depends="compile-source">
         <javac srcdir="${test-dir}" destdir="${build}/test"
-                classpath = "${build}/src" includeAntRuntime = "false"/>
+                classpath = "${build}/src;externalLib/junit-4.10.jar" includeAntRuntime = "false"/>
     </target>
 
     <target name="run-tests" depends="compile-test">
