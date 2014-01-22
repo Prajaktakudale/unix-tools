@@ -19,7 +19,7 @@
 
     <target name="run-tests" depends="compile-test">
         <java classname="org.junit.runner.JUnitCore"
-              classpath="externalLib/junit-4.10.jar;${build}/src;${build}/test">
+              classpath="./externalLib/junit-4.10.jar;${build}/src;${build}/test">
             <arg value="prajaktv.unixtools.WCTest"/>
             <arg value="prajaktv.unixtools.CutClientTest"/>
             <arg value="prajaktv.unixtools.HeadTest"/>
