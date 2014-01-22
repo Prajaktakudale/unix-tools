@@ -1,5 +1,5 @@
 <project>
-    <property name="test-dir" location="Test"/>
+    <property name="test-dir" location="test"/>
     <property name="build" location="build"/>
     <property name="src" location="src"/>
 
