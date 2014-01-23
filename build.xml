@@ -50,7 +50,7 @@
         <copy file="README.md" todir="unix-tools_dist"/>
     </target>
 
-    <target name="createZip" depends="copyReadme">
+    <target name="dist" depends="copyReadme">
         <zip destfile="unix_tools.zip"
              basedir="unix-tools_dist"/>
     </target>
