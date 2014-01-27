@@ -8,6 +8,10 @@ public class Head {
             count = Integer.parseInt(args.substring(1));
         }
         String lines[] = filedata.split("\r\n");
+
+        if(lines.length < count){
+            return filedata;
+        }
         for (int line = 0; line < count; line++) {
             stringBuilder.append(lines[line]).append("\r\n");
         }

@@ -50,7 +50,11 @@
         <copy file="README.md" todir="unix-tools_dist"/>
     </target>
 
-    <target name="dist" depends="copyReadme">
+    <target name="copyConfig" depends="copyReadme">
+        <copy file="config.properties" todir="unix-tools_dist"/>
+    </target>
+
+    <target name="dist" depends="copyConfig">
         <zip destfile="unix_tools.zip"
              basedir="unix-tools_dist"/>
     </target>

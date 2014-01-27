@@ -3,6 +3,8 @@ package prajaktv.fileReader;
 import java.io.BufferedReader;
 
 public class FileReader {
+
+
     public String readFile(String filename) {
         String data = "";
         String sCurrentLine = "";

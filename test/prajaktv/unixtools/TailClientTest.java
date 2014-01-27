@@ -11,7 +11,7 @@ public class TailClientTest {
         String args[] = {"one.txt"};
         String expected = "prajakta\r\nsayali\r\nmanali\r\npallavi\r\nshital\r\nkavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir\r\n";
 
-        String actual = tail.tail(text, args);
+        String actual = tail.tail(text, args[0]);
 
         Assert.assertEquals(expected, actual);
     }
@@ -23,7 +23,7 @@ public class TailClientTest {
         String args[] = {"-5", "one.txt"};
         String expected = "kavita\r\nshweta\r\nkajal\r\nsamiksha\r\ntanbir\r\n";
 
-        String actual = tail.tail(text, args);
+        String actual = tail.tail(text, args[0]);
 
         Assert.assertEquals(expected, actual);
     }
